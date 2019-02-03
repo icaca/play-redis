@@ -1,6 +1,6 @@
-self: play -> redis 0.6
+self: play -> redis 0.7
 
 require:
     - play
-    - redis.clients -> jedis 2.4.2
+    - redis.clients -> jedis 2.10.2
     - org.antlr -> stringtemplate 3.2.1
