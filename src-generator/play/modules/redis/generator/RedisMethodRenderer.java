@@ -63,11 +63,12 @@ public class RedisMethodRenderer implements AttributeRenderer {
 
 				if (numParams == totalParams - 1) {
 					if(type.contains("[]")) {
-						type=type.replace(/\[\]/, '...');
+						type=type.replace(/\\[\\]/, '...');
 					}
 					
-					sb.append(renderType(paramType)).append(' ');
 				}
+				sb.append(type).append(' ');
+
 			}
 			sb.append(paramNames[numParams]).append(",");
 			numParams++;
