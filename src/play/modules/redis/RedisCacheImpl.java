@@ -279,7 +279,7 @@ public class RedisCacheImpl implements CacheImpl {
 	@Override
 	public void stop() {
         try {
-            if (Play.configuration.getProperty("redis.cache.flushallonstop", "true").equals("true")) {
+            if (Play.configuration.getProperty("redis.cache.flushallonstop", "false").equals("true")) {
                 getCacheConnection().flushAll();
             }
         } catch (JedisCheckedException e) {
